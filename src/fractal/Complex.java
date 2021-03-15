@@ -118,7 +118,7 @@ public class Complex {
 	/**
 	 * Сравнивает комплексные числа.
 	 *
-	 * @param x объект для сравнения
+	 * @    param x объект для сравнения
 	 * @return true, если числа равны, иначе - false
 	 */
 	public boolean equals(Object x) {
