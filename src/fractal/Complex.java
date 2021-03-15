@@ -57,10 +57,10 @@ public class Complex {
 	 * @return результат умножения
 	 */
 	public Complex times(Complex b) {
-		Complex a = this;
-		double real = a.re * b.re - a.im * b.im;
-		double imag = a.re * b.im + a.im * b.re;
-		return new Complex(real, imag);
+
+		double real = this.re * b.re - this.im * b.im;
+		double image = this.re * b.im + this.im * b.re;
+		return new Complex(real, image);
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class Complex {
 	 *
 	 * @return действительную часть числа
 	 */
-	public double re() {
+	public double real() {
 		return re;
 	}
 
@@ -77,7 +77,7 @@ public class Complex {
 	 *
 	 * @return мнимую часть числа
 	 */
-	public double im() {
+	public double image() {
 		return im;
 	}
 
@@ -111,15 +111,14 @@ public class Complex {
 	 */
 	public static Complex plus(Complex a, Complex b) {
 		double real = a.re + b.re;
-		double imag = a.im + b.im;
-		Complex sum = new Complex(real, imag);
-		return sum;
+		double image = a.im + b.im;
+        return new Complex(real, image);
 	}
 
 	/**
 	 * Сравнивает комплексные числа.
 	 *
-	 * @param x число для сравнения
+	 * @param x объект для сравнения
 	 * @return true, если числа равны, иначе - false
 	 */
 	public boolean equals(Object x) {
